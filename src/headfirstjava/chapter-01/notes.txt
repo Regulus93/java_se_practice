@@ -1,0 +1,49 @@
+Java nevei (és verziószámai, 5-ig):
+	- Java	 	(1.02, 1.1)
+	- Java 2 	(1.2,  1.3, 1.4)
+	- Java 5.0	(Tiger)
+	
+	https://hu.wikipedia.org/wiki/Java_verzi%C3%B3t%C3%B6rt%C3%A9net#J2SE_1.2
+	
+Java AWT package:
+	https://www.javatpoint.com/java-awt
+
+Java osztályok felépítése:
+	
+	--------------------------------
+	| 			Source	           |
+	--------------------------------
+	|  						       |
+	|  Field				       |
+	|  Field				       |
+	|  Field				       |
+	|  						       |
+	|  -----------------------     |
+	|  |        Class        | 	   |
+	|  |---------------------|	   |
+	|  |    -------------	 |	   |
+	|  |    |  Function |	 |	   |
+	|  |	|-----------|	 |	   |
+	|  |	| statement |	 |	   |
+	|  |	| statement |	 |	   |
+	|  |	|  .....    |	 |	   |
+	|  |    |-----------|    |     |
+	|  |                     |     |
+	|  |---------------------|     |
+	|                              |
+	--------------------------------
+	
+
+Futtatóosztály:
+	- amelyikben a Main tagfüggvény található, szignatúrája: public static void main(String[] args)
+	
+Megjegyzések:
+	- Java compiler (javac) létrehoz egy (platformfüggetlen) bájtkódot, amit a platformok különbözőképpen értelmez(het)nek.
+		--> a többi eszközön lévő JVM-ek képesek lefuttatni a bájtkódot
+		
+	- Enkapszuláció elve: minden osztály rejtse el a reprezentációját (hogy könnyen le lehessen cserélni), és csak a publikus metódusain (interfészén) keresztül lehessen megváltoztatni.
+	
+	- Egész értéken nem lehet logikai vizsgálatot végezni, csak boolean-en
+	
+	- Java erősen típusos nyelv, de biztosítja a dinamikus kötést (futás közben olyan új objektumok is betöltődhetnek, melyekre nem tud a fordító felkészülni ==> ClassCastException):
+		-- osztályhierarchia bármely pontjáról hívunk meg egy példánymetódust: mindig a megszólított objektum (dinamikus típus) osztályában fog végrehajtódni, ez csak futáskor derülhet ki [futás alatti- vagy kései kötés]
