@@ -11,4 +11,17 @@ Objektum Orientált paradigma:
 	Példányváltozó: amit az objektumpéldány "tud"
 	Tagfüggvény: amit az objektumpéldány "csinál"
 	
+GarbageCollector:
+	- objektumok a heap memóriában jönnek létre
+	- amennyiben a GC úgy ítéli meg, hogy már nem lesz használva az objektum: kijelöli szemétgyűjtésre
+	- ezután ha kevés a memória, akkor indul el a szemétgyűjtő, és szabadítja fel a területet
+	
+JAR:
+	- pkzip formátumot követi
+	- MANIFEST formátumú szövegfájl: leírja, hogy a csomag melyik osztálya tartalmazza a futtatandó main()-t 
+	(
+		- https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
+		- https://docs.oracle.com/javase/7/docs/technotes/guides/jar/jar.html#The_META-INF_directory
+		- https://stackoverflow.com/questions/39839891/is-it-possible-to-have-a-jar-manifest-to-use-all-jars-in-a-folder
+	)
 	
