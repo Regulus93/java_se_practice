@@ -1,0 +1,14 @@
+Objektum Orientált paradigma:
+	
+	osztály (sablon) - objektum (példány)
+	
+	Leszármazás:
+		- Szülőosztály (ős)
+		- Gyermekosztályok
+		
+	Osztályok viselkedése független más osztályoktól (nem teljesen igaz). ==> ebben a modellben saját, önálló viselkedés
+	
+	Példányváltozó: amit az objektumpéldány "tud"
+	Tagfüggvény: amit az objektumpéldány "csinál"
+	
+	
