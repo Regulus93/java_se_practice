@@ -1,0 +1,41 @@
+Változók csoportosítása:
+
+	- használati helyei:
+		-- osztály mezői - objektum példányváltozói
+		-- tagfüggvények argumentumai, visszatérési értékei, törzsében lokális változóként
+		
+	- fajtái:
+		-- primitívek: alaptípusú értékeket/bitmintákat tárolnak:
+			
+			-------------------------------------------------
+			|	Név		| Bitmélység 	| 	Értéktartomány	|
+			-------------------------------------------------
+			|	boolean	|	JVM-függő	|		1			|
+			|	char	|	16	bit		|		+ 2^16		|
+			|	byte	|	8	bit		|		+-2^8		|
+			|	short	|	16	bit		|		+-2^16		|
+			|	int		|	32	bit		|		+-2^31		|
+			|	long	|	64	bit		|		...			|
+			|	float	|	32	bit		|		változó		|
+			|	double	|	64	bit		|		változó		|
+			-------------------------------------------------
+			
+		-- hivatkozások: objektumokra mutató hivatkozást tárolnak
+		
+Típusbiztonság:
+	- minden változót a típusával és a nevével szükséges bevezetni
+	
+Értékadási error:
+	- int x = 24
+	- byte b = x;
+		[Fordítási hiba]
+			error: incompatible types: possible lossy conversion from int to byte
+					byte b = x;
+       
+Változó elnevezési konvenció: [_$a-zA-Z]([_$a-zA-Z0-9])* ÉS nem lehet Java kulcsszó
+
+Objektumhivatkozások:
+	- adott JVM-en minden objektumhivatkozás mérete megegyezik (JVM-enként ez a méret eltérhet)
+	
+Tömbök:
+	- implicit, rejtett bővítés (int[] tömb tömbeleme lehet byte érték)
