@@ -1,0 +1,18 @@
+Tagfüggvények:
+	- input: paraméterek (híváskor argumentum)
+	- output: visszatérési típus / void
+	
+	- Függvényhíváskor a Java érték szerinti átadást használ. (Lemásolja az "argumentumban lévő biteket" és a másolat kerül a paraméterváltozóba.)
+	
+	- visszatéréskor ugyanúgy érvényesül a rejtett bővítés elve (ha int szerepel a szignatúrában, visszatérhetünk byte-tal)
+	
+	- implicit típuskonverzió: http://ecomputernotes.com/java/what-is-java-operators-and-expressions/implicit-type-conversion
+	
+Betokozás/egységbezárás/enkapszuláció:
+	- private adattagok
+	- public getter/setter-ek
+	
+Alapértelmezett értéket kapnak a példányváltozók:
+	- 0, 0.0, false, null
+	
+Helyi változók nem kapnak alapértelmezett értéket!
