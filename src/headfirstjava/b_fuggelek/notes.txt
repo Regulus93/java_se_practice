@@ -1,0 +1,51 @@
+#10 Bitműveletek:
+	- és/xor/or/and
+	- tolóműveletek:
+		x >> 2 (jobbra tol kettőt, az eredeti balszélsőt illeszti be)
+		x >>> 2 (jobbra tol kettőt, 0-kat illeszt be)
+		x << 2 (balra tol kettőt, 0-kat illeszt be)
+	
+#9 Megváltozthatatlanság:
+	- String immutable:
+		-- String Pool - karakterláncgyűjtő:
+			--- itt jönnek létre a stringek amiket - literállal stb. - létrehoztunk
+			--- a szemétgyűjtő nem figyeli, szóval a memóriát ellepheti a sok string
+		
+		-- StringBuildert használjunk
+	
+	- wrapper immutable:
+		-- nincs setter
+		-- két célja van a wrappernek: primitív becsomagolása és/vagy statikus segédfüggvények használata
+			
+#8 Assertions:
+	- Parancsok:
+		-- javac TestDriveGame.java
+		-- java -ea TestDriveGame
+	
+	- assert(height > 0) : "height = " + height + " weight = " + weight; (akkor íródik ki a szöveg, mikor AssertionError-t kapunk)
+	
+#7 Blokkhatókör
+
+#6 "Láncolt hívás" (Builder) pattern
+
+#5 Beágyazott oszályok:
+	- statikus beágyazott osztály
+	- beágyazott (nem statikus), "belső" osztály (pontosan ott ahol szükségünk van rá)
+	
+#4 Hozzáférési szintek és elérésmódosítók:
+	- Hozzáférési szintek:
+		-- public: tetszőleges helyen, tetszőleges kód elérheti az elemet
+		-- default: azonos csomagban található osztályok érhetik el az elemet
+		-- protected: ugyanaz mint a default + az osztályból leszármazó (akár más csomagban lévő) osztályok érhetik el
+		-- private: elemet csak a vele azonos osztályban található kódok érhetik el
+		
+		-- protected: 
+			- A, és B osztályok, A tartalmaz egy protected láthatóságú tagfüggvényt, mely meghívja egy private láthatóságú tagfüggvényét; B származik le A-ból, ilyenkor ha B meghívja a protected tagfüggvényt akkor exception-t kap, mert hiába tartalmazza a leszármazás miatt a függvényt, hozzáférést nem kapott
+			
+#3 StringBuffer/StringBuilder használata (StringBuffer akkor ha szálbiztosnak kell lennie a műveletnek)
+
+#2 Többdimenziós tömbök:
+	- new int[4][2] esetén létrejön 4 db objektumhivatkozást tartalmazó változó, amik a külső tömbbe kerülnek, és további 4 db 2 elemű tömbre mutat
+	
+#1 Felsoroló típusok:
+	- enumoknak lehet konstruktora, és függvénye, illetve állandófüggő függvényeik is
