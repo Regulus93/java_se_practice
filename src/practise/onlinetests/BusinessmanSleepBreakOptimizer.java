@@ -1,4 +1,3 @@
-package astron.main;
 import java.awt.Point;
 import java.util.Collections;
 import java.util.Comparator;
